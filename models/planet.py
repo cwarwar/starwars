@@ -32,35 +32,35 @@ class Planet:
 
 			data = {
 				'name' : self.name,
-				'wheater' : self.weather,
+				'weather' : self.weather,
 				'terrain' : self.terrain,
 				'timesAppeared' : timesAppeared
 			}
-			return str(self.dal.insert(data))
+			return self.dal.insert(data)
 		return 'False'
 
 
 	def getAll(self, skip, limit):
 		lista = []
 		for collection in self.dal.findAll(skip, limit):
-			lista.append(str(collection))
+			lista.append(collection)
 		return lista
 
 	def getByName(self):
 		if(self.name.strip()):
 			lista = []
 			for collection in self.dal.find("name", self.name):
-				lista.append(str(collection))
+				lista.append(collection)
 			return lista
 
 	def getById(self):
 		if(self.id.strip()):
-			return str(self.dal.findById(self.id))
+			return self.dal.findById(self.id)
 		return 'False'
 
 	def remove(self):
 		if(self.id.strip()):
-			return str(self.dal.remove(self.id))
+			return self.dal.remove(self.id)
 		return 'False'
 			
 
