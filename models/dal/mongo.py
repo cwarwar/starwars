@@ -1,7 +1,8 @@
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from models.dal.basedal import BaseDal
 
-class Mongo:
+class Mongo(BaseDal):
 
 	host = 'localhost'
 	port = 27017

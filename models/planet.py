@@ -1,15 +1,15 @@
 from pymongo import MongoClient
 import requests
 from libraries.swapi import Swapi
+from models.dal.basedal import BaseDal
 from models.exceptions.planet import PlanetException
-from models.dal.mongo import Mongo
 
 class Planet:
 
 	collectionName = 'planet'
 
-	def __init__(self):
-		self.dal = Mongo(self.collectionName)
+	def __init__(self, dal : BaseDal):
+		self.dal = dal
 
 	def setId(self, id):
 		self.id = id

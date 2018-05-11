@@ -3,10 +3,12 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from models.planet import Planet
+from models.dal.mongo import Mongo
 
 app = Flask(__name__)
 
-Planet = Planet()
+Dal = Mongo(Planet.collectionName)
+Planet = Planet(Dal)
 
 @app.route('/planets/store', methods=['POST'])
 def store():
