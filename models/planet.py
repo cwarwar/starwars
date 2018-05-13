@@ -12,7 +12,7 @@ class Planet:
 		self.dal = dal
 
 	def setId(self, id):
-		self.id = id
+		self.id = str(id)
 
 	def setName(self, name):
 		self.name = name
