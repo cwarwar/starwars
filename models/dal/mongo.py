@@ -4,7 +4,7 @@ from models.dal.basedal import BaseDal
 
 class Mongo(BaseDal):
 
-	host = 'localhost'
+	host = 'mongo'
 	port = 27017
 	database = 'starwars'
 
