@@ -10,6 +10,7 @@ services:
       - ../:/app
     ports:
       - 8888:5000
+    command: bash -c "python _tests/test_model.py && python sw.py"
   mongo:
     image: "mongo"
     ports:
