@@ -47,7 +47,7 @@ def getPlanetById(id):
 	except Exception as ex:
 		return formatResponse(ex, False)
 
-@app.route('/planets/remove/<id>')
+@app.route('/planets/remove/<id>', methods=['GET', 'DELETE'])
 def removePlanet(id):
 	try:
 		Planet.setId(id)
