@@ -12,7 +12,7 @@ docker-compose up
 ```
 
 ## Rodando os testes
-Os testes rodam automaticamente assim que o container é instaciado
+Os testes rodam automaticamente assim que o container é instanciado
 
 
 ### Requests
