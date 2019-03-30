@@ -18,7 +18,7 @@ class Swapi:
 
 		while True:	
 			r = requests.get(endpoint)
-			json = r.json();
+			json = r.json()
 
 			for result in json['results']:
 				if(result['name'] == self.name):
